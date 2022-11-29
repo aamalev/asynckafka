@@ -18,7 +18,8 @@ jobs:
 
       - name: Install requirements
         run: |
-          apt-get install -y librdkafka-dev
+          sudo apt update
+          sudo apt install -y librdkafka-dev
           python -m pip install -r requirements.txt
 
       - name: Install cibuildwheel
